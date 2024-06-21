@@ -38,7 +38,7 @@ export default function Card(param) {
     <>
       <div
         id={param.id}
-        className="block max-w-sm px-6 py-3 bg-[#d3e2f2] border border-gray-200 rounded-lg hover:bg-[#e7f0f8]"
+        className="block w-full px-3 py-2 bg-[#d3e2f2] border border-gray-200 rounded-lg hover:bg-[#e7f0f8]"
       >
         <div className="relative">
           <button
@@ -70,13 +70,15 @@ export default function Card(param) {
         </div>
 
         <div className="flex justify-between">
-          <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 ">
+          <h5 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 ">
             {param.title}
           </h5>
         </div>
 
-        <p className=" font-semibold text-xl text-gray-700">{param.author}</p>
-        <p className="font-normal text-gray-700 overflow-clip">
+        <p className=" font-semibold  text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+          {param.author}
+        </p>
+        <p className="font-normal text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 overflow-clip">
           {param.description}
         </p>
       </div>

@@ -38,14 +38,13 @@ export default function App() {
 
   return (
     <>
-      <section>
-        <Header />
-      </section>
-      <main className="flex justify-center mt-24">
+      <Header />
+
+      <main className="flex justify-center  mt-16 sm:mt-20">
         <div className=" w-full mx-10">
           <section>
-            <div className="flex flex-row justify-between my-5">
-              <p className="text-3xl">Books:</p>
+            <div className="flex flex-row justify-between my-3">
+              <p className="text-2xl sm:text-3xl">Books:</p>
 
               <Button buttonText="+ Add New Book" fnc={openModal} />
             </div>
@@ -60,7 +59,7 @@ export default function App() {
             <SearchBar setData={setData} />
             {data && data.length > 0 ? (
               <>
-                <div className="grid md:grid-cols-4 gap-4 grid-cols-2">
+                <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 sm:grid-cols-2">
                   {data.map((ele) => {
                     return (
                       <Card
@@ -89,13 +88,13 @@ export default function App() {
             <div className="flex flex-row justify-end mt-2">
               <div>
                 <button
-                  className="p-1 px-2 mx-2 rounded-lg border-solid border-2 border-black bg-gray-200 hover:bg-gray-50"
+                  className="px-1 sm:px-2 md:py-1 md:px-3 mx-2 rounded-lg border-solid border-2 border-black bg-gray-200 hover:bg-gray-50"
                   onClick={handlePrev}
                 >
                   Prev
                 </button>
                 <button
-                  className="p-1 px-2 mx-2 rounded-lg border-solid border-2 border-black bg-gray-200 hover:bg-gray-50"
+                  className="px-1 sm:px-2 md:py-1 md:px-3 mx-2 rounded-lg border-solid border-2 border-black bg-gray-200 hover:bg-gray-50"
                   onClick={handleNext}
                 >
                   Next

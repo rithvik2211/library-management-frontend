@@ -7,7 +7,9 @@ export default function SearchBar(params) {
   //   document.addEventListener(onKeyDown, )
   const handleKeyDown = (e) => {
     // console.log(e);
-    if (e.code == "Enter") fetchData(getAllBooks, params.setData, { title });
+    let author = title;
+    if (e.code == "Enter")
+      fetchData(getAllBooks, params.setData, { title, author });
   };
 
   return (

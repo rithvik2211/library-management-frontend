@@ -1,7 +1,11 @@
-# Run app
+## Run app
 npm run dev
-# Build
+## Build
 npm run build
-# Run Production 
+## Run Production 
 npm run preview
 
+## Docker
+docker compose up
+
+application runs on port 4173
